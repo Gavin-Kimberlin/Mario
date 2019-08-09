@@ -4,4 +4,3 @@ task :build, [:db_name] do |t, args|
   system("psql #{args.db_name} < database_backup.sql")
   system("createdb -T #{args.db_name} #{args.db_name + '_test'}")
 end
-j
